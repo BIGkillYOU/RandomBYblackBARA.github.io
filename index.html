@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bar Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="chart">
+        <div id="bar1" class="bar">
+            <span id="percentage1" class="percentage"></span>
+            <input id="label1" class="label" type="text" placeholder="message" /> <!-- ให้ผู้ใช้พิมพ์ข้อความ -->
+        </div>
+        
+        <div id="bar2" class="bar">
+            <span id="percentage2" class="percentage"></span>
+            <input id="label2" class="label" type="text" placeholder="message" />
+        </div>
+        
+        <div id="bar3" class="bar">
+            <span id="percentage3" class="percentage"></span>
+            <input id="label3" class="label" type="text" placeholder="message" />
+        </div>
+        
+        <div id="bar4" class="bar">
+            <span id="percentage4" class="percentage"></span>
+            <input id="label4" class="label" type="text" placeholder="message" />
+        </div>
+        
+        <div id="bar5" class="bar">
+            <span id="percentage5" class="percentage"></span>
+            <input id="label5" class="label" type="text" placeholder="message" />
+        </div>
+        
+        <div id="bar6" class="bar">
+            <span id="percentage6" class="percentage"></span>
+            <input id="label6" class="label" type="text" placeholder="message" />
+        </div>        
+    </div>
+    <br><br><br><br>
+    <!--button onclick="randomizeBars()">สุ่มใหม่</!--button-->
+    <div class='container'>
+        <span class='pulse-button' onclick="randomizeBars()">click</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

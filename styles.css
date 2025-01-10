@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #00bfff, #8a2be2, #ff1493); /* สีน้ำเงิน, ม่วง, ชมพู */
+    background-size: 400% 400%; /* เพิ่มขนาดเพื่อให้การไล่สีดูชัดเจนขึ้น */
+    animation: gradientAnimation 5s ease infinite; /* สร้างการเคลื่อนไหวของพื้นหลัง */
+    height: 100vh; /* ให้พื้นหลังครอบคลุมทั้งหน้าจอ */
+    margin: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    /*width: 200px;
+    height: 100%;*/
+    margin: 0 auto 0;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    /*background: #fff;*/
+}
+
+.pulse-button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 1.3em;
+    font-weight: light;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: -1px;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    background: #46ff84;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(90, 212, 145, 0.5);
+    -webkit-animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+    -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    70% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+    100% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}
+
+#chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* ยึดแท่งกราฟกับด้านล่าง */
+    margin: 20px auto;
+    width: 80%;
+    height: 500px;
+    padding: 10px;
+}
+
+.bar {
+    width: 12%;
+    height: 500px; /* ความสูงเริ่มต้นเท่ากัน */
+    background-image: url('Wood.jpg'); /* เปลี่ยนสีฟ้าเป็นภาพพื้นหลัง */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
+    transition: height 0.5s;
+    transform-origin: bottom; /* ยึดฐานล่าง */
+    position: relative; /* สำหรับการวาง % ภายในกราฟ */
+}
+
+.bar:hover {
+    background-color: #2ecc71;
+}
+
+.percentage {
+    position: absolute;
+    bottom: 10px; /* ให้ % อยู่ใกล้กับด้านล่างของแท่ง */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    background-color: lch(0 0 0 / 0.50);
+    border-radius: 10px; /* ทำให้มุมของพื้นหลังโค้ง */
+    width: 60%;
+}
+
+.label {
+    position: absolute;
+    bottom: -45px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: normal;
+    border: none;
+    text-align: center;
+    width: 80%; /* ปรับขนาดช่องกรอก */
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: lch(100 0 0 / 0.2);
+    border-radius: 10px; /* ทำให้มุมของพื้นหลังโค้ง */
+    width: 90%;
+}
+
+@media (max-width: 500px) {
+    body {
+        height: 100vh; /* จำกัดความสูงให้สูงสุดเท่ากับความสูงของหน้าจอ */
+    }
+    
+    .pulse-button {
+        width: 20vw;
+        height: 20vw;
+        font-size: 12px;
+    }
+
+    #chart {
+        height: 50vh; /* กราฟจะยืดหยุ่นมากขึ้นเมื่อความสูงหน้าจอลดลง */
+    }
+
+    .bar {
+        /*width: 30%;*/
+    }
+
+    .percentage {
+        font-size: 12px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+}
