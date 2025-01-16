@@ -120,18 +120,18 @@ body {
 
 .label {
     position: absolute;
-    bottom: -45px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
+    bottom: -65px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
     font-weight: normal;
     border: none;
     text-align: center;
     width: 80%; /* ปรับขนาดช่องกรอก */
     padding: 5px;
     box-sizing: border-box;
-    background-color: lch(100 0 0 / 0.2);
+    background-color: lch(56 136.76 46.31 / 0.2);
     border-radius: 10px; /* ทำให้มุมของพื้นหลังโค้ง */
     width: 90%;
 }
