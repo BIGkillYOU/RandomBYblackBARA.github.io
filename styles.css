@@ -85,14 +85,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-end; /* ยึดแท่งกราฟกับด้านล่าง */
-    margin: 20px auto;
-    width: 80%;
+    margin: 15px auto;
+    width: 95%;
     height: 500px;
     padding: 10px;
 }
 
 .bar {
-    width: 12%;
+    width: 6%;
     height: 500px; /* ความสูงเริ่มต้นเท่ากัน */
     background-image: url('Wood.jpg'); /* เปลี่ยนสีฟ้าเป็นภาพพื้นหลัง */
     background-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
@@ -120,20 +120,20 @@ body {
 
 .label {
     position: absolute;
-    bottom: -65px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
+    bottom: -45px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
     left: 50%;
     transform: translateX(-50%);
     color: rgb(0, 0, 0);
-    font-size: 30px;
-    font-weight: normal;
+    font-size: 20px;
+    /*font-weight: normal;*/
     border: none;
     text-align: center;
     width: 80%; /* ปรับขนาดช่องกรอก */
-    padding: 5px;
+    /*padding: 5px;*/
     box-sizing: border-box;
     background-color: lch(56 136.76 46.31 / 0.2);
     border-radius: 10px; /* ทำให้มุมของพื้นหลังโค้ง */
-    width: 90%;
+    width: 280px;
 }
 
 @media (max-width: 500px) {
