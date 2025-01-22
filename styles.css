@@ -120,20 +120,18 @@ body {
 
 .label {
     position: absolute;
-    bottom: -45px; /* ปรับตำแหน่งข้อความให้อยู่ใต้แท่ง */
+    bottom: -45px; /* ตำแหน่งใต้แท่ง */
     left: 50%;
     transform: translateX(-50%);
     color: rgb(0, 0, 0);
-    font-size: 14px;
-    /*font-weight: normal;*/
-    border: none;
+    font-size: 20px;
     text-align: center;
-    width: 80%; /* ปรับขนาดช่องกรอก */
-    /*padding: 5px;*/
+    padding: 5px 10px; /* เพิ่มพื้นที่รอบข้อความ */
     box-sizing: border-box;
     background-color: lch(56 136.76 46.31 / 0.2);
-    border-radius: 10px; /* ทำให้มุมของพื้นหลังโค้ง */
-    width: 280px;
+    border-radius: 10px; /* มุมโค้ง */
+    display: inline-block; /* ให้ปรับขนาดตามเนื้อหา */
+    white-space: nowrap; /* ข้อความไม่เว้นบรรทัด */
 }
 
 @media (max-width: 500px) {
